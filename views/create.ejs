@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./partials/head.ejs") %>
+
+<body>
+    
+    <%- include("./partials/nav.ejs") %>
+    <div class="blogs content">
+        <h2><%= title %></h2>
+        <!-- 动态 -->
+    </div>
+
+    <div class="create-blogs content">
+        <form action="/blogs" method="POST">
+            <label for="title">博客标题</label>
+            <input type="text" id="title" name="title" required>
+            <label for="snippet">博客描述</label>
+            <input type="text" id="snippet" name="snippet" required>
+            <label for="boyd">博客内容</label>
+            <textarea id="body" name="body" required></textarea>
+            <button>提交</button>
+        </form>
+    </div>
+    <%- include("./partials/foot.ejs") %>
+</body>
+
+</html>
