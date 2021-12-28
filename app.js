@@ -14,6 +14,10 @@ mongoose.connect(dbURI)
     .catch(error => console.log(error))
 
 
-app.get("/", (req, res)=>{
-    res.send("<p>hello</p>")
+app.get("/", (req, res) => {
+    res.sendFile("./view/index.html", { root: __dirname })
+})
+
+app.get("/about", (req, res) => {
+    res.sendFile("./view/about.html", { root: __dirname })
 })
